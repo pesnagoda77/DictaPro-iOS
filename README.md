@@ -1,16 +1,29 @@
-# smart_recorder_v6
+# DictaPro iOS
 
-A new Flutter project.
+iOS platform configuration for DictaPro — voice recorder with AI transcription.
 
-## Getting Started
+## Contents
 
-This project is a starting point for a Flutter application.
+- `Podfile` — CocoaPods configuration (iOS 13.0+)
+- `Runner/Info.plist` — App permissions (microphone, photo library)
+- `Runner/AppDelegate.swift` — Native Swift code with `dictapro/convert` MethodChannel (MP3→WAV via AVAssetReader)
+- `Runner/Base.lproj/LaunchScreen.storyboard` — Dark-themed launch screen
+- `Runner.xcodeproj/` — Xcode project
+- `Runner.xcworkspace/` — Xcode workspace
 
-A few resources to get you started if this is your first Flutter project:
+## Requirements
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- iOS 13.0+, Xcode 14+, CocoaPods
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Setup (on Mac)
+
+```bash
+cd ios
+pod install
+```
+
+Then open `Runner.xcworkspace` in Xcode.
+
+## Note
+
+This is a partial Flutter project. Merge this `ios/` folder into the main DictaPro Flutter project to build.
